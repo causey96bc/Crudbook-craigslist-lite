@@ -399,7 +399,7 @@ async function myUser() {
             const token = data
             return token
         } else {
-            alert("Please log in or create an account to access this sites many features.")
+            alert("Please log in or create an account to access this sites many features. Also you will only be able to delete posts you create, and only see messages on a post you make.")
         }
     }
     catch (error) {
