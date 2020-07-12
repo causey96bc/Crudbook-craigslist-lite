@@ -1,0 +1,64 @@
+body{
+    background-color: #dfe3ee;
+}
+
+
+
+
+.dsc-header{
+    background-color: #4267B2;
+   width: 100%;
+    text-align: left;
+
+    justify-content: space-evenly;
+}
+.logout-btn{
+    text-align: center;
+    display: block;
+}
+.auth-process{
+    margin: 1rem auto;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 2px;
+    border: 1px solid #A4A4A4;
+    font-size: 1.3rem;
+     /* display: none;  */
+}
+.login-account{
+    justify-content: space-around;
+
+}
+.dropdowns{
+    display: block;
+    
+}
+.hack-div{
+    height: 6rem;
+}
+.login-dropdown{
+border-radius: 35%;
+}
+.create-dropdown{
+border-radius: 35%;
+}
+footer{
+    padding-top: 10px;
+   background-color:  #4267B2;
+}
+.post-content{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.create-form{
+    max-width: 50%;
+    justify-content: flex-end;
+}
+input{
+    background-color: #c4a667;
+}
+textarea{
+    background-color: #c4a667;
+}

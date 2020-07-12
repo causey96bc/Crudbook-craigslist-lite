@@ -1,0 +1,115 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDBOOK!</title>
+    <link rel="stylesheet" href="https://unpkg.com/wingcss" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="moment.js"></script>
+</head>
+
+<body>
+    <div id="allPosts">
+        <div class="container dsc-header">
+            <div class="row header-dsc">
+                <div class="col-4">
+                    <div class="text">
+                        <h1>CRUDBOOK</h1>
+                        <p>welcome to CRUDBOOK</p>
+                        <p> look, create, delete, and comment on other friends post </p><br>
+                        all in one site.
+                        </p>
+                    </div>
+                    <fieldset>
+                        <label for="keywords"></label>
+                        <input id="keywords" type="text" placeholder="enter keywords..." />
+                        <button class=" button searchForm">Search</button>
+                    </fieldset>
+
+                </div>
+                <div class="row dropdowns">
+                    <div class=" col-3 create-dropdown">
+                        <button class="button register" data-modal="#register">Create an account</button>
+                    </div>
+                    <div class=" col-3 login-dropdown">
+                        <button class="button log-user" data-modal="#login">login</button>
+                    </div>
+                    <div class=" col-3 login-dropdown">
+                        <button class="button logout-user hide" data-modal="#logout">logout</button>
+                    </div>
+                    <div class="col-3">
+                        <button class=" button dark-mode">Dark Mode</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container post-content">
+            <div class=" row post-info">
+                <div id="readable-content" class="col-2">
+                    <h1>here iam</h1>
+
+                </div>
+
+                <div class="col-1 create-form">
+                    <h4>Create a Post here.</h4>
+                    <input class="selected-title" type="text" placeholder="post title" />
+                    <input class="selected-body" type="text" placeholder="Post Body" />
+                    <input class="selected-price" type="text" placeholder="price input" />
+                    <!-- <input class="selected-delivery" type="text" placeholder="Will Deliver?" /> -->
+                    <input type="checkbox" id="deliver" name="will deliver" value="yes">
+                    <label for="deliver">Delivery available</label><br>
+                    <input type="checkbox" id="deliver" name="no delivery" value="no">
+                    <label for="deliver">Delivery unavailable</label><br>
+                    <button class="create-post">submit</button></fieldset>
+                </div>
+            </div>
+        </div>
+        <footer class="container footer-items">
+            <div class="row">
+
+                <div class="col-1 logout-btn">
+                    <h3>CRUDBOOK</h3>
+                    <button class="logout-button">Logout</button></fieldset>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="register" class="modal">
+        <div class="modal-content">
+            <div class="contact-form">
+                <a class="close">&times;</a>
+                <h2> Create Account Here</h2><br>
+                <input id="create-account" type="text" placeholder="What is your username" minlength="5" />
+                <input id="create-password" type="password" placeholder="create password" minlength="5" />
+                <input class="confirm" type="password" placeholder="confirm password" required />
+                <button class="create-btn">create account</button>
+            </div>
+        </div>
+    </div>
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <div class="contact-form">
+                <a class="close">&times;</a>
+                <h2>Login Here</h2><br>
+                <input id="login-username" type="text" placeholder="What is your username?" />
+                <input id="login-password" type="password" placeholder="login password" />
+                <div class="hack-div"> &nbsp; </div>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+    <div id="message" class="modal">
+        <div class="modal-content">
+            <div class="contact-form">
+                <a class="close">&times;</a>
+                <h2>send a message here!</h2><br>
+                <input id="messages-Post" type="text" placeholder="What is your message?" />
+                <div class="hack-div"> &nbsp; </div>
+                <button data-messageId="${post._id}" class="button message-btn">Send Message</button>
+            </div>
+        </div>
+    </div>
+</body>

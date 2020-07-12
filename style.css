@@ -1,0 +1,194 @@
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
+    
+}
+
+
+
+main{
+    background-color: #dfe3ee;
+}
+body{
+    
+    background-color: #dfe3ee;
+}
+
+
+
+.dsc-header{
+    background-color: #4267B2;
+   width: 100%;
+    text-align: left;
+
+    justify-content: space-evenly;
+}
+.logout-btn{
+    text-align: center;
+    display: block;
+}
+.auth-process{
+    margin: 1rem auto;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 2px;
+    border: 1px solid #A4A4A4;
+    font-size: 1.3rem;
+     /* display: none;  */
+}
+.login-account{
+    justify-content: space-around;
+
+}
+.dropdowns{
+    display: block;
+    
+}
+.hack-div{
+    height: 6rem;
+}
+.login-dropdown{
+border-radius: 35%;
+}
+.create-dropdown{
+border-radius: 35%;
+}
+footer{
+    padding-top: 10px;
+   background-color:  #4267B2;
+}
+.post-content{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.create-form{
+    max-width: 50%;
+    justify-content: flex-end;
+}
+input{
+    background-color: #c4a667;
+}
+textarea{
+    background-color: #c4a667;
+}
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 8888;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #F7F7F7;
+    margin: 10vh auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+}
+@media (min-width: 1366px) {
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10vh auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    }
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+button.button {
+    background:none;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  border-bottom:#02274a 1px solid;
+  padding:0 0 3px 0;
+  font-size:16px;
+}
+button.button:hover {
+  border-bottom:#a99567 1px solid;
+  color:#a99567;
+}
+.container{
+    max-width: none;
+    width: 100%;
+}
+.container .post-content{
+    padding: 20px;
+}
+.readable-content{
+    
+    margin-bottom: 25px;
+    padding: 15px;
+    border-bottom: 1px solid black;
+    background-color: rgba(139,157,195, 0.8);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 300px;
+}
+.divide{
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;;
+    padding-bottom: 5px;
+}
+.delete-post{
+    background-color: darkgray;
+    
+    
+    }
+    .text{
+        padding-left: 10px;
+    }
+    fieldset{
+        padding-left: 10px;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    .message{
+        display: none
+    }
+
+.hide{display: none }
+.dark-mode{
+    background-color: 	black;
+    color: rgba(193, 143, 215, 0.584);
+    border-bottom: 1px solid white;
+
+}
+.dark-mode2{
+    background-color: rgba(128, 128, 128, 0.365);
+    color: honeydew;
+}
+button.searchForm{
+    padding-left: 10px;
+}
+button.dark-mode{
+    padding-right: 10px;
+    color: white;
+}
+button.message-btn{
+    color: grey;
+}
