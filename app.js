@@ -420,6 +420,8 @@ function filterPosts() {
 
     if (newSearch.length === 0) {
         return state.myposts
+    } else if (!keyword) {
+        return state.myposts
     } else {
         return newSearch
     }
@@ -444,6 +446,7 @@ $(".searchForm").on("click", function (event) {
     $("#readable-content").empty()
     const postlist = filterPosts();
     renderSearch(postlist)
+    bootstrap()
 })
 // toggles the show message css on click
 $("#readable-content").on("click", ".show-messages", function () {
