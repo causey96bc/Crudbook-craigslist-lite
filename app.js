@@ -446,7 +446,7 @@ $(".searchForm").on("click", function (event) {
     $("#readable-content").empty()
     const postlist = filterPosts();
     renderSearch(postlist)
-    bootstrap()
+
 })
 // toggles the show message css on click
 $("#readable-content").on("click", ".show-messages", function () {
