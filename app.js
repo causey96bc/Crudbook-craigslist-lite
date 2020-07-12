@@ -1,4 +1,4 @@
-
+//GLOBAL VARIABLES
 const postURL = ' https://strangers-things.herokuapp.com/api/2004-UNF-HY-WEB-PT/posts';
 const messages = "/messages"
 let TOKEN_KEY = localStorage.getItem("TOKEN_KEY")
@@ -31,7 +31,6 @@ async function isregistered() {
         TOKEN_KEY = token
         localStorage.setItem("TOKEN_KEY", TOKEN_KEY)
         bootstrap()
-        console.log("registered", TOKEN_KEY)
         alert("you have no created an account. Please login to access features.")
     }
     catch (error) {
@@ -57,11 +56,9 @@ async function login() {
         const { token } = data
 
         TOKEN_KEY = token
-        console.log("tokenKey", response)
         localStorage.setItem("TOKEN_KEY", TOKEN_KEY)
 
         bootstrap()
-        console.log("logged in", TOKEN_KEY)
         if (loggedIn) {
             alert("you are now logged in, please continue to the site")
         } else {
@@ -196,7 +193,6 @@ async function createPosts(postObj) {
                 )
             })
             const newpostObj = await response.json()
-            console.log(newpostObj)
             return newpostObj
         } else {
             alert("you must log in to create a post")
@@ -210,7 +206,6 @@ async function createPosts(postObj) {
 // by passing in the new post object which a user will input the values for. 
 // it also will add the new post into my state prepending it to the begginning of the posts list.
 $('.create-post').on('click', async function (event) {
-    console.log(this)
     event.preventDefault();
     const postObj = {
         post: {
@@ -225,9 +220,6 @@ $('.create-post').on('click', async function (event) {
             const newPost = await createPosts(postObj);
             state.myposts.push(newPost.data.post)
             renderHelper(state.myposts)
-            console.log(state.myposts)
-            // bootstrap()
-            console.log('this is a new post', newPost);
             alert("you made a post")
         } else {
             alert("You must log in or create an account to create a post.")
@@ -243,7 +235,7 @@ $('.create-post').on('click', async function (event) {
 // inside of  local storage and delete it.
 $(".create-btn").on("click", function () {
     isregistered()
-    console.log(this)
+
 })
 function logOut() {
     localStorage.removeItem("TOKEN_KEY")
@@ -258,7 +250,7 @@ $(".logout-user").on("click", function () {
 
 $(".login-btn").on("click", function () {
     login()
-    console.log(this)
+
 
 })
 // these click handlers toggle modal controls
@@ -317,15 +309,15 @@ async function deletePosts(POST_ID) {
 // it also will delete the post in real time using the slideup function. 
 
 $("#readable-content").on("click", ".delete-post", async function () {
-    console.log(this)
+
     POST_ID = $(this).attr("data-postId")
 
-    console.log(POST_ID)
-    // POST_ID = "5f0215f6780fec00179db2b7"
+    // console.log(POST_ID)
+
     try {
         if (loggedIn) {
             const deletedPost = await deletePosts(POST_ID)
-            console.log("is this working", deletedPost)
+            // console.log("is this working", deletedPost)
             return $(".readable-content").slideUp(deletedPost)
         } else {
             alert("unauthorized")
@@ -381,7 +373,7 @@ $(".message-btn").on("click", async function () {
         if (loggedIn) {
             bootstrap()
             const messagePost = await messagesAPI(messageObj, POST_ID)
-            console.log("is this working", messagePost)
+            // console.log("is this working", messagePost)
         } else {
             alert("please log in or create an account to send a message")
         }
@@ -405,8 +397,6 @@ async function myUser() {
             })
             const data = await response.json()
             const token = data
-
-            console.log("im user", TOKEN_KEY)
             return token
         } else {
             alert("Please log in or create an account to access this sites many features.")
